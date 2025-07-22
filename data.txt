@@ -1,11 +1,11 @@
-Start Location 					End Location 					Miles	Stop Time
-Start/Control #1: GGB Welcome Center 		Control #2: Pt Reyes Station			34.5	0:10
-Control #2: Pt Reyes Station			Control #3: Petaluma Safeway			20.5
-Control #3: Petaluma Safeway			Add'l Stop #1: Geyserville Market & Deli	39.5
-Add'l Stop #1: Geyserville Market & Deli	Add'l Stop #2: Indian Creek Campground		42.5
-Add'l Stop #2: Indian Creek Campground		Control #4: Fort Bragg Dennys			44.5
-Control #4: Fort Bragg Dennys			Control #5: Indian Creek Campground		43.9
-Control #5: Indian Creek Campground		Add'l Stop #3: Healdsburg Safeway		50.6
-Add'l Stop #3: Healdsburg Safeway		Control #6: Guerneville 76 Station/Safeway	19.1
-Control #6: Guerneville 76 Station/Safeway	Control #7: Olema				44.7
-Control #7: Olema 				Final Control: Crissy Field 			33.7
+Start Location 					End Location 					Miles	Speed	Stop Time
+Start/Control #1: GGB Welcome Center 		Control #2: Pt Reyes Station			34.5	13.0	0:10
+Control #2: Pt Reyes Station			Control #3: Petaluma Safeway			20.5	13.5	0:20
+Control #3: Petaluma Safeway			Add'l Stop #1: Geyserville Market & Deli	39.5	15.0	0:20
+Add'l Stop #1: Geyserville Market & Deli	Add'l Stop #2: Indian Creek Campground		42.5	10.0	0:20
+Add'l Stop #2: Indian Creek Campground		Control #4: Fort Bragg Dennys			44.5	11.0	0:45
+Control #4: Fort Bragg Dennys			Control #5: Indian Creek Campground		43.9	11.0	4:00
+Control #5: Indian Creek Campground		Add'l Stop #3: Healdsburg Safeway		50.6	10.0	0:20
+Add'l Stop #3: Healdsburg Safeway		Control #6: Guerneville 76 Station/Safeway	19.1	15.0	0:20
+Control #6: Guerneville 76 Station/Safeway	Control #7: Olema				44.7	13.0	0:20
+Control #7: Olema 				Final Control: Crissy Field 			33.7	13.0	0:00
