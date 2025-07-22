@@ -2,6 +2,7 @@
 
 """
 usage: route <datetime> <file>
+usage: route <datetime> <file> -km
 
 example: route 2025-05-03T06:00:00 data.txt
 
@@ -78,7 +79,7 @@ def read(f: str):
     return entries
 
 
-def report(data : tuple):
+def report(data : tuple, convert: bool):
     start = data[1].strftime("%Y-%m-%d %H:%M:%S")
     print(f"Start Time:\t {start}")
     end = data[2].strftime("%Y-%m-%d %H:%M")
@@ -87,7 +88,10 @@ def report(data : tuple):
     entries = data[0]
     fields = ["start", "end", "departure", "speed", "ride_time", "arrival_time",
               "distance", "cumulative", "stime", "elapsed_time"]
-    h = ["Start Location", "End Location", "Departure", "Average Speed", "Ride Time", "Arrival Time",
+    speed = "mph"
+    if convert:
+        speed = "km/h"
+    h = ["Start Location", "End Location", "Departure", speed, "Ride Time", "Arrival Time",
          "Miles", "Cumulative", "Stop Time", "Elapsed Time"]
     headers = {}
     i = 0
@@ -111,7 +115,7 @@ def report(data : tuple):
         print(" ")
 
 
-def calculate(start: str, file: str) -> tuple:
+def calculate(start: str, file: str, convert: bool) -> tuple:
     """
     Read a data file and generate distances and times.
     """
@@ -125,7 +129,12 @@ def calculate(start: str, file: str) -> tuple:
         entry["departure"] = datetime.strptime(start, "%Y-%m-%dT%H:%M:%S").strftime("%H:%M")
 
         distance = float(entry["distance"])
-        d = get_duration(distance, float(entry["speed"]))
+        speed = float(entry["speed"])
+        d = get_duration(distance, speed)
+
+        if convert:
+            speed = speed * 1.60934
+            entry["speed"] = f"{speed:.1f}"
 
         # the ride time for the segment in HH:MM
         entry["ride_time"] = d.strftime("%H:%M")
@@ -159,8 +168,11 @@ def calculate(start: str, file: str) -> tuple:
 def main():
     start = sys.argv[1]
     file = sys.argv[2]
+    convert = False
+    if len(sys.argv) >= 4 and sys.argv[3] == "-km":
+        convert = True
 
-    entries = calculate(start, file)
-    report(entries)
+    entries = calculate(start, file, convert)
+    report(entries, convert)
 
 main()
