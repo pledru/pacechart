@@ -1,0 +1,7 @@
+Start Location 					End Location 					Miles	Speed	Stop Time
+Quincy						Belden Inn (Food)				28.0	14.0	0:30
+Belden Inn					Scooters Cafe					27.7	13.0	0:40
+Scooters Cafe					Oroville (Food)					22.9	14.0	0:40
+Oroville					West Butte					39.0	14.5	0:20
+West Butte					Knights Landing					39.9	14.5	0:40
+Knights Landing					Davis						21.4	14.5	0:00

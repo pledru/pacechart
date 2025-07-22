@@ -1,0 +1,8 @@
+Start Location 					End Location 					Miles	Speed	Stop Time
+Quincy						Antelope Lake					43.0	13.0	0:10
+Antelope Lake					Janesville (food)				19.1	13.0	0:30
+Janesville					Susanville (food)				14.0	13.0	0:45
+Susanville					Silver Lake turnoff				27.4	13.0	0:10
+Silver Lake turnoff				Westwood					18.0	13.0	0:40
+Westwood					Indian Valley Road				31.9	14.0	0:20
+Indian Valley Road				Quincy						20.9	13.0	0:00
