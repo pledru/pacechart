@@ -89,10 +89,12 @@ def report(data : tuple, convert: bool):
     fields = ["start", "end", "departure", "speed", "ride_time", "arrival_time",
               "distance", "cumulative", "stime", "elapsed_time"]
     speed = "mph"
+    distance = "Miles"
     if convert:
         speed = "km/h"
+        distance = "Kilometers"
     h = ["Start Location", "End Location", "Departure", speed, "Ride Time", "Arrival Time",
-         "Miles", "Cumulative", "Stop Time", "Elapsed Time"]
+         distance, "Cumulative", "Stop Time", "Elapsed Time"]
     headers = {}
     i = 0
     for f in fields:
@@ -135,6 +137,8 @@ def calculate(start: str, file: str, convert: bool) -> tuple:
         if convert:
             speed = speed * 1.60934
             entry["speed"] = f"{speed:.1f}"
+            distance = distance * 1.60934
+            entry["distance"] = f"{distance:.1f}"
 
         # the ride time for the segment in HH:MM
         entry["ride_time"] = d.strftime("%H:%M")
@@ -151,7 +155,7 @@ def calculate(start: str, file: str, convert: bool) -> tuple:
         st = get_arrival(at_full, stime_obj.time())
 
         cumulative_distance = cumulative_distance + distance
-        entry["cumulative"] = str(cumulative_distance)
+        entry["cumulative"] = f"{cumulative_distance:.1f}"
 
         # next start time
         start = st.strftime("%Y-%m-%dT%H:%M:%S")
