@@ -1,0 +1,9 @@
+./route.py 2025-10-03T04:00:00 grr_day1.txt > grr_day1_chart.txt
+
+./route.py 2025-10-04T06:00:00 grr_day2.txt > grr_day2_chart.txt
+
+./route.py 2025-10-05T06:00:00 grr_day3.txt > grr_day3_chart.txt
+
+./route.py 2025-10-06T06:00:00 grr_day4.txt > grr_day4_chart.txt
+
+./route.py 2025-10-06T06:00:00 grr_day4.txt -km > grr_day4_chart_km.txt
